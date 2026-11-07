@@ -1,0 +1,8 @@
+Project: Radio Music panel
+Author: Tom Whitwell, Music Thing Modular (https://github.com/TomWhitwell)
+Source: https://github.com/TomWhitwell/RadioMusic
+Commit: 0a3541afda6e2a5c96146a6b0617964d1ec29664
+Path: RadioMusicHardware/Gerbers/Rev 2 Gerbers Dec 2014/Radio Music P Rev2 GRB
+Files: Gerber and drill files copied unmodified. Renamed to a standard extension: RadioMusic_Panel.OUT to RadioMusic_Panel.GKO
+License: CC-BY-SA-3.0 (see LICENSE)
+Retrieved: 2026-11-07

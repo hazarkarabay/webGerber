@@ -1,0 +1,40 @@
+{
+  "name": "@tracespace/plotter",
+  "version": "5.0.0-alpha.0-webgerber.1",
+  "description": "Plot @tracespace/parser ASTs into image trees.",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "import": "./dist/tracespace-plotter.js"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tracespace/tracespace.git",
+    "directory": "packages/plotter"
+  },
+  "keywords": [
+    "pcb",
+    "circuit",
+    "board",
+    "hardware",
+    "electronics"
+  ],
+  "contributors": [
+    "Mike Cousins <mike@cousins.io> (https://mike.cousins.io)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tracespace/tracespace/issues"
+  },
+  "homepage": "https://github.com/tracespace/tracespace#readme",
+  "dependencies": {
+    "@types/unist": "^2.0.6",
+    "@tracespace/parser": "5.0.0-alpha.0"
+  }
+}

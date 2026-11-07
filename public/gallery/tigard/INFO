@@ -1,0 +1,8 @@
+Project: Tigard
+Author: Franklin Harding (https://github.com/tigard-tools)
+Source: https://github.com/tigard-tools/tigard
+Commit: 0dd58e710374880a3ae988f2ddfeb46f5ec8061d
+Path: tigard.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from tigard.kicad_pcb
+License: CC-BY-SA-4.0 (see LICENSE)
+Retrieved: 2026-11-07

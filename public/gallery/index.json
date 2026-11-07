@@ -1,0 +1,693 @@
+[
+ {
+  "slug": "arduino-uno",
+  "name": "Arduino Uno Rev3",
+  "desc": "The classic ATmega328P Arduino board, through-hole version.",
+  "url": "https://docs.arduino.cc/hardware/uno-rev3/",
+  "license": "CC-BY-SA-2.5",
+  "files": [
+   "arduino_Uno_Rev3-02-TH.GBL",
+   "arduino_Uno_Rev3-02-TH.GBO",
+   "arduino_Uno_Rev3-02-TH.GBP",
+   "arduino_Uno_Rev3-02-TH.GBS",
+   "arduino_Uno_Rev3-02-TH.GKO",
+   "arduino_Uno_Rev3-02-TH.GML",
+   "arduino_Uno_Rev3-02-TH.GTL",
+   "arduino_Uno_Rev3-02-TH.GTO",
+   "arduino_Uno_Rev3-02-TH.GTP",
+   "arduino_Uno_Rev3-02-TH.GTS",
+   "arduino_Uno_Rev3-02-TH.XLN"
+  ]
+ },
+ {
+  "slug": "arduino-mega2560",
+  "name": "Arduino Mega 2560 Rev3",
+  "desc": "ATmega2560 Arduino with 54 digital I/O pins.",
+  "url": "https://docs.arduino.cc/hardware/mega-2560/",
+  "license": "CC-BY-SA-2.5",
+  "files": [
+   "Arduino_MEGA_2560-Rev3.GBL",
+   "Arduino_MEGA_2560-Rev3.GBO",
+   "Arduino_MEGA_2560-Rev3.GBP",
+   "Arduino_MEGA_2560-Rev3.GBS",
+   "Arduino_MEGA_2560-Rev3.GKO",
+   "Arduino_MEGA_2560-Rev3.GML",
+   "Arduino_MEGA_2560-Rev3.GTL",
+   "Arduino_MEGA_2560-Rev3.GTO",
+   "Arduino_MEGA_2560-Rev3.GTP",
+   "Arduino_MEGA_2560-Rev3.GTS",
+   "Arduino_MEGA_2560-Rev3.XLN"
+  ]
+ },
+ {
+  "slug": "bus-pirate-v3-6a",
+  "name": "Bus Pirate v3.6a",
+  "desc": "Universal serial bus interface tool from Dangerous Prototypes.",
+  "url": "https://github.com/DangerousPrototypes/Dangerous-Prototypes-Open-Hardware",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "BusPirate-v3.6a-SSOP.GBL",
+   "BusPirate-v3.6a-SSOP.GBO",
+   "BusPirate-v3.6a-SSOP.GBS",
+   "BusPirate-v3.6a-SSOP.GTL",
+   "BusPirate-v3.6a-SSOP.GTO",
+   "BusPirate-v3.6a-SSOP.GTS",
+   "BusPirate-v3.6a-SSOP.TXT"
+  ]
+ },
+ {
+  "slug": "tomu-v0-4-6",
+  "name": "Tomu v0.4.6",
+  "desc": "Tiny ARM board that fits in a USB port.",
+  "url": "https://github.com/im-tomu/tomu-hardware",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+   "tomu-B.Cu.gbl",
+   "tomu-B.Mask.gbs",
+   "tomu-B.Paste.gbp",
+   "tomu-B.SilkS.gbo",
+   "tomu-Edge.Cuts.gm1",
+   "tomu-F.Cu.gtl",
+   "tomu-F.Mask.gts",
+   "tomu-F.Paste.gtp",
+   "tomu-F.SilkS.gto",
+   "tomu.drl"
+  ]
+ },
+ {
+  "slug": "fomu-pvt1",
+  "name": "Fomu PVT1",
+  "desc": "FPGA board that fits in a USB port, 4 layers with buried vias.",
+  "url": "https://github.com/im-tomu/fomu-hardware",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+   "tomu-fpga-B.Cu.gbl",
+   "tomu-fpga-B.Mask.gbs",
+   "tomu-fpga-B.Paste.gbp",
+   "tomu-fpga-Edge.Cuts.gm1",
+   "tomu-fpga-F.Cu.gtl",
+   "tomu-fpga-F.Mask.gts",
+   "tomu-fpga-F.Paste.gtp",
+   "tomu-fpga-front-in1.drl",
+   "tomu-fpga-in1-in2.drl",
+   "tomu-fpga-in2-back.drl",
+   "tomu-fpga-NPTH.drl"
+  ]
+ },
+ {
+  "slug": "rambo-1-3l",
+  "name": "RAMBo 1.3L",
+  "desc": "3D printer controller board with integrated stepper drivers.",
+  "url": "https://github.com/ultimachine/Rambo",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "RAMBo.GBL",
+   "RAMBo.GBS",
+   "RAMBo.GKO",
+   "RAMBo.GTL",
+   "RAMBo.GTO",
+   "RAMBo.GTP",
+   "RAMBo.GTS",
+   "RAMBo.TXT"
+  ]
+ },
+ {
+  "slug": "olimex-esp32-poe-rev-j",
+  "name": "Olimex ESP32-PoE rev J",
+  "desc": "ESP32 board with Ethernet and Power over Ethernet.",
+  "url": "https://github.com/OLIMEX/ESP32-POE",
+  "license": "Apache-2.0",
+  "files": [
+   "ESP32-PoE_Rev_J-B_Cu.gbr",
+   "ESP32-PoE_Rev_J-B_Mask.gbr",
+   "ESP32-PoE_Rev_J-B_Paste.gbr",
+   "ESP32-PoE_Rev_J-B_SilkS.gbr",
+   "ESP32-PoE_Rev_J-Edge_Cuts.gbr",
+   "ESP32-PoE_Rev_J-F_Cu.gbr",
+   "ESP32-PoE_Rev_J-F_Mask.gbr",
+   "ESP32-PoE_Rev_J-F_Paste.gbr",
+   "ESP32-PoE_Rev_J-F_SilkS.gbr",
+   "ESP32-PoE_Rev_J-NPTH.drl",
+   "ESP32-PoE_Rev_J-PTH.drl"
+  ]
+ },
+ {
+  "slug": "project-hydra-meshtastic-base",
+  "name": "Project Hydra Meshtastic base",
+  "desc": "Meshtastic LoRa node board with ESP32 and Ebyte E22 radio.",
+  "url": "https://github.com/Hydra-Designs/project-hydra-meshtastic-pcb",
+  "license": "GPL-3.0",
+  "files": [
+   "Hydra Base-B_Cu.gbr",
+   "Hydra Base-B_Mask.gbr",
+   "Hydra Base-B_Paste.gbr",
+   "Hydra Base-B_Silkscreen.gbr",
+   "Hydra Base-Edge_Cuts.gbr",
+   "Hydra Base-F_Cu.gbr",
+   "Hydra Base-F_Mask.gbr",
+   "Hydra Base-F_Paste.gbr",
+   "Hydra Base-F_Silkscreen.gbr",
+   "Hydra Base-NPTH.drl",
+   "Hydra Base-PTH.drl"
+  ]
+ },
+ {
+  "slug": "orangecrab-r0-2-1",
+  "name": "OrangeCrab r0.2.1",
+  "desc": "Feather-format ECP5 FPGA board with DDR3 and USB.",
+  "url": "https://github.com/orangecrab-fpga/orangecrab-hardware",
+  "license": "CERN-OHL-1.2",
+  "files": [
+   "OrangeCrab-CuBottom.gbr",
+   "OrangeCrab-CuTop.gbr",
+   "OrangeCrab-EdgeCuts.gbr",
+   "OrangeCrab-MaskBottom.gbr",
+   "OrangeCrab-MaskTop.gbr",
+   "OrangeCrab-NPTH.drl",
+   "OrangeCrab-PasteBottom.gbr",
+   "OrangeCrab-PasteTop.gbr",
+   "OrangeCrab-PTH.drl",
+   "OrangeCrab-SilkBottom.gbr",
+   "OrangeCrab-SilkTop.gbr"
+  ]
+ },
+ {
+  "slug": "ploopy-classic-vertical-r1",
+  "name": "Ploopy Classic vertical R1",
+  "desc": "Open source trackball with a small vertical PCB and optical sensor.",
+  "url": "https://github.com/ploopyco/classic-trackball",
+  "license": "CERN-OHL-1.2",
+  "files": [
+   "Vertical.GBL",
+   "Vertical.GBO",
+   "Vertical.GBS",
+   "Vertical.GTL",
+   "Vertical.GTO",
+   "Vertical.GTP",
+   "Vertical.GTS",
+   "Vertical.TXT"
+  ]
+ },
+ {
+  "slug": "openshock-core",
+  "name": "OpenShock Core",
+  "desc": "Small ESP32 wireless transmitter board with V-score outline.",
+  "url": "https://github.com/OpenShock/Hardware",
+  "license": "CERN-OHL-S-2.0",
+  "files": [
+   "OpenShock-CuBottom.gbr",
+   "OpenShock-CuTop.gbr",
+   "OpenShock-EdgeCuts.gbr",
+   "OpenShock-MaskBottom.gbr",
+   "OpenShock-MaskTop.gbr",
+   "OpenShock-NPTH.drl",
+   "OpenShock-PasteBottom.gbr",
+   "OpenShock-PasteTop.gbr",
+   "OpenShock-PTH.drl",
+   "OpenShock-SilkBottom.gbr",
+   "OpenShock-SilkTop.gbr"
+  ]
+ },
+ {
+  "slug": "vesc-4-12",
+  "name": "VESC 4.12",
+  "desc": "Open source brushless motor controller by Benjamin Vedder.",
+  "url": "https://github.com/vedderb/bldc-hardware",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+   "BLDC_4-B_Cu.gbl",
+   "BLDC_4-B_Mask.gbs",
+   "BLDC_4-B_Paste.gbp",
+   "BLDC_4-B_SilkS.gbo",
+   "BLDC_4-Edge_Cuts.gm1",
+   "BLDC_4-F_Cu.gtl",
+   "BLDC_4-F_Mask.gts",
+   "BLDC_4-F_Paste.gtp",
+   "BLDC_4-F_SilkS.gto",
+   "BLDC_4-NPTH.drl",
+   "BLDC_4.drl"
+  ]
+ },
+ {
+  "slug": "simplefocmini",
+  "name": "SimpleFOCMini",
+  "desc": "Tiny brushless motor driver board for the SimpleFOC library.",
+  "url": "https://github.com/simplefoc/SimpleFOCMini",
+  "license": "MIT",
+  "files": [
+   "Drill_PTH_Through.DRL",
+   "Drill_PTH_Through_Via.DRL",
+   "Gerber_BoardOutlineLayer.GKO",
+   "Gerber_BottomLayer.GBL",
+   "Gerber_BottomSilkscreenLayer.GBO",
+   "Gerber_BottomSolderMaskLayer.GBS",
+   "Gerber_TopLayer.GTL",
+   "Gerber_TopPasteMaskLayer.GTP",
+   "Gerber_TopSilkscreenLayer.GTO",
+   "Gerber_TopSolderMaskLayer.GTS"
+  ]
+ },
+ {
+  "slug": "radio-music-panel",
+  "name": "Radio Music panel",
+  "desc": "Music Thing Modular Radio Music eurorack panel.",
+  "url": "https://github.com/TomWhitwell/RadioMusic",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "RadioMusic_Panel.GBL",
+   "RadioMusic_Panel.GBO",
+   "RadioMusic_Panel.GBP",
+   "RadioMusic_Panel.GBS",
+   "RadioMusic_Panel.GKO",
+   "RadioMusic_Panel.GML",
+   "RadioMusic_Panel.GTL",
+   "RadioMusic_Panel.GTO",
+   "RadioMusic_Panel.GTP",
+   "RadioMusic_Panel.GTS",
+   "RadioMusic_Panel.TXT"
+  ]
+ },
+ {
+  "slug": "eez-dib-bp3c",
+  "name": "EEZ DIB BP3C",
+  "desc": "EEZ Bench Box 3 programmable power supply module board.",
+  "url": "https://github.com/eez-open/modular-psu",
+  "license": "TAPR-OHL-1.0",
+  "files": [
+   "EEZ DIB B3C-B_Cu.gbr",
+   "EEZ DIB B3C-B_Mask.gbr",
+   "EEZ DIB B3C-B_Paste.gbr",
+   "EEZ DIB B3C-B_Silkscreen.gbr",
+   "EEZ DIB B3C-Edge_Cuts.gbr",
+   "EEZ DIB B3C-F_Cu.gbr",
+   "EEZ DIB B3C-F_Mask.gbr",
+   "EEZ DIB B3C-F_Paste.gbr",
+   "EEZ DIB B3C-F_Silkscreen.gbr",
+   "EEZ DIB B3C-NPTH.drl",
+   "EEZ DIB B3C-PTH.drl"
+  ]
+ },
+ {
+  "slug": "rc6502-terminal",
+  "name": "RC6502 Terminal",
+  "desc": "Apple 1 replica serial terminal card in RC2014 style.",
+  "url": "https://github.com/tebl/RC6502-Apple-1-Replica",
+  "license": "GPL-3.0",
+  "files": [
+   "RC6502 Terminal-B.Cu.gbl",
+   "RC6502 Terminal-B.Mask.gbs",
+   "RC6502 Terminal-B.Paste.gbp",
+   "RC6502 Terminal-B.SilkS.gbo",
+   "RC6502 Terminal-Edge.Cuts.gm1",
+   "RC6502 Terminal-F.Cu.gtl",
+   "RC6502 Terminal-F.Mask.gts",
+   "RC6502 Terminal-F.Paste.gtp",
+   "RC6502 Terminal-F.SilkS.gto",
+   "RC6502 Terminal.drl"
+  ]
+ },
+ {
+  "slug": "peaks-panel-mutatedmutables",
+  "name": "Peaks panel (MutatedMutables)",
+  "desc": "Alternative PCB panel for the Mutable Instruments Peaks module.",
+  "url": "https://github.com/TheSlowGrowth/MutatedMutables",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "peaks-B.Cu.gbr",
+   "peaks-B.Mask.gbr",
+   "peaks-B.SilkS.gbr",
+   "peaks-Edge.Cuts.gbr",
+   "peaks-F.Cu.gbr",
+   "peaks-F.Mask.gbr",
+   "peaks-F.SilkS.gbr",
+   "peaks.drl"
+  ]
+ },
+ {
+  "slug": "6502-computer",
+  "name": "6502 computer",
+  "desc": "Ben Eater style 65C02 single board computer.",
+  "url": "https://github.com/mike42/6502-computer",
+  "license": "CC-BY-4.0",
+  "files": [
+   "6502-computer-B_Cu.gbl",
+   "6502-computer-B_Mask.gbs",
+   "6502-computer-B_Paste.gbp",
+   "6502-computer-B_SilkS.gbo",
+   "6502-computer-Edge_Cuts.gm1",
+   "6502-computer-F_Cu.gtl",
+   "6502-computer-F_Mask.gts",
+   "6502-computer-F_Paste.gtp",
+   "6502-computer-F_SilkS.gto",
+   "6502-computer-NPTH.drl",
+   "6502-computer-PTH.drl"
+  ]
+ },
+ {
+  "slug": "bus-pirate-v4e",
+  "name": "Bus Pirate v4e",
+  "desc": "Bus Pirate v4 with PIC24FJ256 and more flash.",
+  "url": "https://github.com/DangerousPrototypes/Dangerous-Prototypes-Open-Hardware",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "BusPirate-v4e.GBL",
+   "BusPirate-v4e.GBO",
+   "BusPirate-v4e.GBS",
+   "BusPirate-v4e.GTL",
+   "BusPirate-v4e.GTO",
+   "BusPirate-v4e.GTS",
+   "BusPirate-v4e.TXT"
+  ]
+ },
+ {
+  "slug": "bus-blaster-v4",
+  "name": "Bus Blaster v4",
+  "desc": "High speed JTAG debugger with CPLD buffer.",
+  "url": "https://github.com/DangerousPrototypes/Dangerous-Prototypes-Open-Hardware",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "BusBlasterv4.GBL",
+   "BusBlasterv4.GBO",
+   "BusBlasterv4.GBS",
+   "BusBlasterv4.GTL",
+   "BusBlasterv4.GTO",
+   "BusBlasterv4.GTS",
+   "BusBlasterv4.TXT"
+  ]
+ },
+ {
+  "slug": "obsidian-esp32",
+  "name": "Obsidian ESP32",
+  "desc": "ESP32 module board in a Raspberry Pi Zero style form factor.",
+  "url": "https://github.com/singleboardsolutions/Obsidian-ESP32",
+  "license": "CERN-OHL-1.2",
+  "files": [
+   "ESP32-Pi-B_Cu.gbl",
+   "ESP32-Pi-B_Mask.gbs",
+   "ESP32-Pi-B_Paste.gbp",
+   "ESP32-Pi-B_SilkS.gbo",
+   "ESP32-Pi-Edge_Cuts.gm1",
+   "ESP32-Pi-F_Cu.gtl",
+   "ESP32-Pi-F_Mask.gts",
+   "ESP32-Pi-F_Paste.gtp",
+   "ESP32-Pi-F_SilkS.gto",
+   "ESP32-Pi-NPTH.drl",
+   "ESP32-Pi-PTH.drl"
+  ]
+ },
+ {
+  "slug": "mitayi-pico-d1-r0-6",
+  "name": "Mitayi Pico D1 R0.6",
+  "desc": "Open RP2040 board in the Raspberry Pi Pico footprint.",
+  "url": "https://github.com/CIRCUITSTATE/Mitayi-Pico-D1",
+  "license": "MIT",
+  "files": [
+   "Mitayi-Pico-D1-R0.6-B_Cu.gbr",
+   "Mitayi-Pico-D1-R0.6-B_Mask.gbr",
+   "Mitayi-Pico-D1-R0.6-B_Paste.gbr",
+   "Mitayi-Pico-D1-R0.6-B_Silkscreen.gbr",
+   "Mitayi-Pico-D1-R0.6-Edge_Cuts.gbr",
+   "Mitayi-Pico-D1-R0.6-F_Cu.gbr",
+   "Mitayi-Pico-D1-R0.6-F_Mask.gbr",
+   "Mitayi-Pico-D1-R0.6-F_Paste.gbr",
+   "Mitayi-Pico-D1-R0.6-F_Silkscreen.gbr",
+   "Mitayi-Pico-D1-R0.6-NPTH.drl",
+   "Mitayi-Pico-D1-R0.6-PTH.drl"
+  ]
+ },
+ {
+  "slug": "glasgow-rev-d1",
+  "name": "Glasgow Interface Explorer rev D1",
+  "desc": "Digital interface explorer for hardware hacking, 6-layer board.",
+  "url": "https://github.com/GlasgowEmbedded/glasgow",
+  "license": "0BSD",
+  "files": [
+   "glasgow-B_Cu.gbl",
+   "glasgow-B_Mask.gbs",
+   "glasgow-B_Paste.gbp",
+   "glasgow-B_Silkscreen.gbo",
+   "glasgow-Edge_Cuts.gm1",
+   "glasgow-F_Cu.gtl",
+   "glasgow-F_Mask.gts",
+   "glasgow-F_Paste.gtp",
+   "glasgow-F_Silkscreen.gto",
+   "glasgow-NPTH.drl",
+   "glasgow-PTH.drl"
+  ]
+ },
+ {
+  "slug": "tigard",
+  "name": "Tigard",
+  "desc": "FT2232H based multi-protocol debug and programming tool.",
+  "url": "https://github.com/tigard-tools/tigard",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+   "tigard-B_Cu.gbl",
+   "tigard-B_Mask.gbs",
+   "tigard-B_Paste.gbp",
+   "tigard-B_SilkS.gbo",
+   "tigard-Edge_Cuts.gm1",
+   "tigard-F_Cu.gtl",
+   "tigard-F_Mask.gts",
+   "tigard-F_Paste.gtp",
+   "tigard-F_SilkS.gto",
+   "tigard-NPTH.drl",
+   "tigard-PTH.drl"
+  ]
+ },
+ {
+  "slug": "smartknob-view-base",
+  "name": "SmartKnob View base",
+  "desc": "Haptic BLDC knob with round display, base board.",
+  "url": "https://github.com/scottbez1/smartknob",
+  "license": "Apache-2.0",
+  "files": [
+   "view_base-B_Cu.gbl",
+   "view_base-B_Mask.gbs",
+   "view_base-B_Paste.gbp",
+   "view_base-B_Silkscreen.gbo",
+   "view_base-Edge_Cuts.gm1",
+   "view_base-F_Cu.gtl",
+   "view_base-F_Mask.gts",
+   "view_base-F_Paste.gtp",
+   "view_base-F_Silkscreen.gto",
+   "view_base-NPTH.drl",
+   "view_base-PTH.drl"
+  ]
+ },
+ {
+  "slug": "rp-micro",
+  "name": "RP Micro",
+  "desc": "RP2040 Pro Micro compatible board.",
+  "url": "https://github.com/siderakb/rp-micro",
+  "license": "CERN-OHL-P-2.0",
+  "files": [
+   "rp-micro-B_Cu.gbl",
+   "rp-micro-B_Mask.gbs",
+   "rp-micro-B_Paste.gbp",
+   "rp-micro-B_Silkscreen.gbo",
+   "rp-micro-Edge_Cuts.gm1",
+   "rp-micro-F_Cu.gtl",
+   "rp-micro-F_Mask.gts",
+   "rp-micro-F_Paste.gtp",
+   "rp-micro-F_Silkscreen.gto",
+   "rp-micro-NPTH.drl",
+   "rp-micro-PTH.drl"
+  ]
+ },
+ {
+  "slug": "ducky-board-esp32-s3",
+  "name": "Ducky Board ESP32-S3",
+  "desc": "ESP32-S3 breakout board.",
+  "url": "https://github.com/makersfunduck/ducky-board-esp32-s3",
+  "license": "GPL-3.0",
+  "files": [
+   "esp32_mine-B_Cu.gbl",
+   "esp32_mine-B_Mask.gbs",
+   "esp32_mine-B_Paste.gbp",
+   "esp32_mine-B_Silkscreen.gbo",
+   "esp32_mine-Edge_Cuts.gm1",
+   "esp32_mine-F_Cu.gtl",
+   "esp32_mine-F_Mask.gts",
+   "esp32_mine-F_Paste.gtp",
+   "esp32_mine-F_Silkscreen.gto",
+   "esp32_mine-NPTH.drl",
+   "esp32_mine-PTH.drl"
+  ]
+ },
+ {
+  "slug": "usb-armory-mk-ii",
+  "name": "USB armory Mk II",
+  "desc": "Flash-drive sized open hardware secure computer.",
+  "url": "https://github.com/usbarmory/usbarmory",
+  "license": "CERN-OHL-S-2.0",
+  "files": [
+   "armory-BOTTOM.gbl",
+   "armory-B_Mask.gbs",
+   "armory-B_Paste.gbp",
+   "armory-B_SilkS.gbo",
+   "armory-Edge_Cuts.gm1",
+   "armory-F_Mask.gts",
+   "armory-F_Paste.gtp",
+   "armory-F_SilkS.gto",
+   "armory-NPTH.drl",
+   "armory-PTH.drl",
+   "armory-TOP.gtl"
+  ]
+ },
+ {
+  "slug": "hackrf-one-kicad",
+  "name": "HackRF One",
+  "desc": "Current KiCad revision of the HackRF One software defined radio.",
+  "url": "https://github.com/greatscottgadgets/hackrf",
+  "license": "CERN-OHL-P-2.0",
+  "files": [
+   "hackrf-one-B_Mask.gbs",
+   "hackrf-one-B_Paste.gbp",
+   "hackrf-one-B_Silkscreen.gbo",
+   "hackrf-one-C1F.gtl",
+   "hackrf-one-C4B.gbl",
+   "hackrf-one-Edge_Cuts.gm1",
+   "hackrf-one-F_Mask.gts",
+   "hackrf-one-F_Paste.gtp",
+   "hackrf-one-F_Silkscreen.gto",
+   "hackrf-one-NPTH.drl",
+   "hackrf-one-PTH.drl"
+  ]
+ },
+ {
+  "slug": "librevna",
+  "name": "LibreVNA",
+  "desc": "USB vector network analyzer from 100 kHz to 6 GHz.",
+  "url": "https://github.com/jankae/LibreVNA",
+  "license": "GPL-3.0",
+  "files": [
+   "VNA-B_Cu.gbl",
+   "VNA-B_Mask.gbs",
+   "VNA-B_Paste.gbp",
+   "VNA-B_Silkscreen.gbo",
+   "VNA-Edge_Cuts.gm1",
+   "VNA-F_Cu.gtl",
+   "VNA-F_Mask.gts",
+   "VNA-F_Paste.gtp",
+   "VNA-F_Silkscreen.gto",
+   "VNA-NPTH.drl",
+   "VNA-PTH.drl"
+  ]
+ },
+ {
+  "slug": "moteus-c1",
+  "name": "moteus c1",
+  "desc": "Brushless servo controller for robotics.",
+  "url": "https://github.com/mjbots/moteus",
+  "license": "Apache-2.0",
+  "files": [
+   "moteus_c1-B_Cu.gbl",
+   "moteus_c1-B_Mask.gbs",
+   "moteus_c1-B_Paste.gbp",
+   "moteus_c1-B_Silkscreen.gbo",
+   "moteus_c1-Edge_Cuts.gm1",
+   "moteus_c1-F_Cu.gtl",
+   "moteus_c1-F_Mask.gts",
+   "moteus_c1-F_Paste.gtp",
+   "moteus_c1-F_Silkscreen.gto",
+   "moteus_c1-NPTH.drl",
+   "moteus_c1-PTH.drl"
+  ]
+ },
+ {
+  "slug": "libre-solar-mppt-2420-hc",
+  "name": "Libre Solar MPPT 2420 HC",
+  "desc": "20A solar charge controller for 12V and 24V batteries.",
+  "url": "https://github.com/LibreSolar/mppt-2420-hc",
+  "license": "CERN-OHL-W-2.0",
+  "files": [
+   "mppt-2420-hc-Bottom.gbl",
+   "mppt-2420-hc-B_Mask.gbs",
+   "mppt-2420-hc-B_Paste.gbp",
+   "mppt-2420-hc-B_SilkS.gbo",
+   "mppt-2420-hc-Edge_Cuts.gm1",
+   "mppt-2420-hc-F_Mask.gts",
+   "mppt-2420-hc-F_Paste.gtp",
+   "mppt-2420-hc-F_SilkS.gto",
+   "mppt-2420-hc-NPTH.drl",
+   "mppt-2420-hc-PTH.drl",
+   "mppt-2420-hc-Top.gtl"
+  ]
+ },
+ {
+  "slug": "hades-micro",
+  "name": "Hades Micro flight controller",
+  "desc": "Small STM32 flight control board for fixed wing drones.",
+  "url": "https://github.com/pms67/HadesFCS",
+  "license": "BSD-3-Clause",
+  "files": [
+   "HadesMicro-B_Cu.gbl",
+   "HadesMicro-B_Mask.gbs",
+   "HadesMicro-B_Paste.gbp",
+   "HadesMicro-B_SilkS.gbo",
+   "HadesMicro-Edge_Cuts.gm1",
+   "HadesMicro-F_Cu.gtl",
+   "HadesMicro-F_Mask.gts",
+   "HadesMicro-F_Paste.gtp",
+   "HadesMicro-F_SilkS.gto",
+   "HadesMicro-NPTH.drl",
+   "HadesMicro-PTH.drl"
+  ]
+ },
+ {
+  "slug": "ads1292r-ecg-breakout",
+  "name": "ADS1292R ECG breakout",
+  "desc": "Two channel ECG and respiration breakout board.",
+  "url": "https://github.com/upsidedownlabs/ADS1292R-Breakout",
+  "license": "CERN-OHL-S-2.0",
+  "files": [
+   "ads1292r-B_Cu.gbl",
+   "ads1292r-B_Mask.gbs",
+   "ads1292r-B_Paste.gbp",
+   "ads1292r-B_SilkS.gbo",
+   "ads1292r-Edge_Cuts.gm1",
+   "ads1292r-F_Cu.gtl",
+   "ads1292r-F_Mask.gts",
+   "ads1292r-F_Paste.gtp",
+   "ads1292r-F_SilkS.gto",
+   "ads1292r-NPTH.drl",
+   "ads1292r-PTH.drl"
+  ]
+ },
+ {
+  "slug": "olinuxino-lime",
+  "name": "A20-OLinuXino-LIME",
+  "desc": "Olimex open hardware Linux single board computer, 4 layers.",
+  "url": "https://github.com/OLIMEX/OLINUXINO",
+  "license": "CC-BY-SA-3.0",
+  "files": [
+   "Bot.GBL",
+   "Bot_Mask.gbr",
+   "Bot_Paste.gbr",
+   "Bot_Silk.gbr",
+   "Dimension.GKO",
+   "Drill.XLN",
+   "Top.GTL",
+   "Top_Mask.gbr",
+   "Top_Paste.gbr",
+   "Top_Silk.gbr"
+  ]
+ },
+ {
+  "slug": "maple-r3",
+  "name": "Maple r3",
+  "desc": "LeafLabs Arduino-like STM32 board.",
+  "url": "https://github.com/leaflabs/maple",
+  "license": "CC-BY-SA-2.0",
+  "files": [
+   "maple-r3.drd",
+   "maple-r3.GBL",
+   "maple-r3.GBO",
+   "maple-r3.GBS",
+   "maple-r3.GTL",
+   "maple-r3.GTO",
+   "maple-r3.GTS"
+  ]
+ }
+]

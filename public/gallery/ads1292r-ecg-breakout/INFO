@@ -1,0 +1,8 @@
+Project: ADS1292R ECG breakout
+Author: Upside Down Labs (https://github.com/upsidedownlabs)
+Source: https://github.com/upsidedownlabs/ADS1292R-Breakout
+Commit: 9effb817a858c0ad00bb8f0b4a0e36d9daa595d9
+Path: ADS1292RIPBS/ads1292r.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from ads1292r.kicad_pcb
+License: CERN-OHL-S-2.0 (see LICENSE)
+Retrieved: 2026-11-07

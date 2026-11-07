@@ -1,0 +1,8 @@
+Project: SmartKnob View base
+Author: Scott Bezek (https://github.com/scottbez1)
+Source: https://github.com/scottbez1/smartknob
+Commit: 4eb988399c3fda6ffd3006772856093dfe9adb86
+Path: electronics/view_base/view_base.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from view_base.kicad_pcb
+License: Apache-2.0 (see LICENSE)
+Retrieved: 2026-11-07

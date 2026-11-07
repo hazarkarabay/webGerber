@@ -1,0 +1,8 @@
+Project: Hades Micro flight controller
+Author: Philip Salmony (pms67) (https://github.com/pms67)
+Source: https://github.com/pms67/HadesFCS
+Commit: ad6935db6ad8af8603cba0d84286dcc5568df3a6
+Path: Hardware/HadesMicro/HadesMicro.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from HadesMicro.kicad_pcb
+License: BSD-3-Clause (see LICENSE)
+Retrieved: 2026-11-07

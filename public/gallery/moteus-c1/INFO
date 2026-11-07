@@ -1,0 +1,8 @@
+Project: moteus c1
+Author: mjbots (https://github.com/mjbots)
+Source: https://github.com/mjbots/moteus
+Commit: aec03338883359fae7b32df6d56974958448c67e
+Path: hw/c1/moteus_c1.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from moteus_c1.kicad_pcb
+License: Apache-2.0 (see LICENSE)
+Retrieved: 2026-11-07

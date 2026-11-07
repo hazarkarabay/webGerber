@@ -1,0 +1,8 @@
+Project: HackRF One
+Author: Great Scott Gadgets (https://github.com/greatscottgadgets)
+Source: https://github.com/greatscottgadgets/hackrf
+Commit: 3a63b29953a3b763f428821e02110def9fb1cade
+Path: hardware/hackrf-one/hackrf-one.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from hackrf-one.kicad_pcb
+License: CERN-OHL-P-2.0 (see LICENSE)
+Retrieved: 2026-11-07

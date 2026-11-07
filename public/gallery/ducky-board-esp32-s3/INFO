@@ -1,0 +1,8 @@
+Project: Ducky Board ESP32-S3
+Author: makersfunduck (https://github.com/makersfunduck)
+Source: https://github.com/makersfunduck/ducky-board-esp32-s3
+Commit: caee4b03084db7200595b53b840895e903a3e77f
+Path: esp32_mine.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from esp32_mine.kicad_pcb
+License: GPL-3.0 (see LICENSE)
+Retrieved: 2026-11-07

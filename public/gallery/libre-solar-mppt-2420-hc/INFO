@@ -1,0 +1,8 @@
+Project: Libre Solar MPPT 2420 HC
+Author: Libre Solar (https://github.com/LibreSolar)
+Source: https://github.com/LibreSolar/mppt-2420-hc
+Commit: b1c11fee826d40b0465eae3dd58a15a336be2d7c
+Path: kicad/mppt-2420-hc.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from mppt-2420-hc.kicad_pcb
+License: CERN-OHL-W-2.0 (see LICENSE)
+Retrieved: 2026-11-07

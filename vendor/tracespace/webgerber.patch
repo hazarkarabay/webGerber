@@ -1,0 +1,282 @@
+--- a/plotter/dist/tracespace-plotter.js
++++ b/plotter/dist/tracespace-plotter.js
+@@ -1,4 +1,4 @@
+-import { COMMENT as Ct, GRAPHIC as F, LEADING as B, TRAILING as j, COORDINATE_FORMAT as Pt, UNITS as Rt, IN as Tt, TOOL_MACRO as St, TOOL_DEFINITION as J, MACRO_SHAPE as Lt, TOOL_CHANGE as It, POLYGON as Nt, OBROUND as K, RECTANGLE as Gt, CIRCLE as vt, MACRO_VARIABLE as bt, MACRO_PRIMITIVE as Dt, MACRO_THERMAL as wt, MACRO_MOIRE_DEPRECATED as Ft, MACRO_POLYGON as Ht, MACRO_OUTLINE as zt, MACRO_LOWER_LEFT_LINE_DEPRECATED as Bt, MACRO_CENTER_LINE as jt, MACRO_VECTOR_LINE_DEPRECATED as Wt, MACRO_VECTOR_LINE as Vt, MACRO_CIRCLE as qt, DRILL as $t, SHAPE as I, SEGMENT as G, SLOT as kt, INTERPOLATE_MODE as st, QUADRANT_MODE as Yt, SINGLE as Ut, REGION_MODE as Z, DONE as Xt, MOVE as W, CW_ARC as ct, CCW_ARC as ot, LINE as Qt } from "@tracespace/parser";
++import { COMMENT as Ct, GRAPHIC as F, LEADING as B, TRAILING as j, COORDINATE_FORMAT as Pt, UNITS as Rt, IN as Tt, TOOL_MACRO as St, TOOL_DEFINITION as J, MACRO_SHAPE as Lt, TOOL_CHANGE as It, POLYGON as Nt, OBROUND as K, RECTANGLE as Gt, CIRCLE as vt, MACRO_VARIABLE as bt, MACRO_PRIMITIVE as Dt, MACRO_THERMAL as wt, MACRO_MOIRE_DEPRECATED as Ft, MACRO_POLYGON as Ht, MACRO_OUTLINE as zt, MACRO_LOWER_LEFT_LINE_DEPRECATED as Bt, MACRO_CENTER_LINE as jt, MACRO_VECTOR_LINE_DEPRECATED as Wt, MACRO_VECTOR_LINE as Vt, MACRO_CIRCLE as qt, DRILL as $t, SHAPE as I, SEGMENT as G, SLOT as kt, INTERPOLATE_MODE as st, QUADRANT_MODE as Yt, SINGLE as Ut, REGION_MODE as Z, DONE as Xt, MOVE as W, CW_ARC as ct, CCW_ARC as ot, LINE as Qt, LOAD_POLARITY as Lp, STEP_REPEAT as Sr, CLEAR as Cl } from "@tracespace/parser";
+ const Jt = "image", v = "imageShape", it = "imagePath", Kt = "imageRegion", O = "line", g = "arc", S = "circle", H = "rectangle", M = "polygon", z = "outline", Y = "layeredShape", { PI: T } = Math, P = T / 2, at = 3 * P, A = 2 * T;
+ function V(t) {
+   return t >= 0 && t <= A ? t : t < 0 ? t + A : t > A ? t - A : V(t);
+@@ -448,7 +448,7 @@
+   return { type: S, erase: n === 0, cx: a, cy: p, r: i };
+ }
+ function he(t, e) {
+-  const [n, r, c, s, o, i, a] = e, [p, f] = [i - s, o - c], u = r / 2, l = Math.sqrt(p ** 2 + f ** 2), [y, h] = [u * f / l, u * p / l];
++  const [n, r, c, s, o, i, a] = e, [p, f] = [i - s, o - c], u = r / 2, l = Math.sqrt(p ** 2 + f ** 2), [y, h] = [u * p / l, u * f / l];
+   return {
+     type: M,
+     erase: n === 0,
+@@ -585,32 +585,35 @@
+   _ambiguousArcCenter: !1,
+   _regionMode: !1,
+   _defaultGraphic: void 0,
++  _clear: !1,
+   plot(t, e, n) {
+-    const r = [], c = this._setGraphicState(t), s = this._plotCurrentPath(t, e, c);
++    const r = [], c = this._setGraphicState(t), s = this._plotCurrentPath(t, e, c), r0 = s ? 1 : 0;
+     if (s && r.push(s), c === I && (e == null ? void 0 : e.type) === b && r.push({ type: v, shape: ce(e, n) }), c === I && (e == null ? void 0 : e.type) === dt && r.push({ type: v, shape: pe(e, n) }), c === G && (this._currentPath = this._currentPath ?? {
+       segments: [],
+       region: this._regionMode,
+-      tool: e
++      tool: e,
++      erase: this._clear
+     }, this._currentPath.segments.push(
+       nt(n, this._arcDirection, this._ambiguousArcCenter)
+     )), c === kt) {
+       const o = rt([nt(n)], e);
+       o && r.push(o);
+     }
++    if (this._clear) for (const o of r.slice(r0)) o.erase = !0;
+     return r;
+   },
+   _setGraphicState(t) {
+-    if (t.type === st && (this._arcDirection = mt(t.mode)), t.type === Yt && (this._ambiguousArcCenter = t.quadrant === Ut), t.type === Z && (this._regionMode = t.region), t.type === F)
++    if (t.type === Lp && (this._clear = t.polarity === Cl), t.type === st && (this._arcDirection = mt(t.mode)), t.type === Yt && (this._ambiguousArcCenter = t.quadrant === Ut), t.type === Z && (this._regionMode = t.region), t.type === F)
+       return t.graphic === G ? this._defaultGraphic = G : t.graphic !== null && (this._defaultGraphic = void 0), t.graphic ?? this._defaultGraphic;
+   },
+   _plotCurrentPath(t, e, n) {
+-    if (this._currentPath !== void 0 && (e !== this._currentPath.tool || t.type === Z || t.type === Xt || n === W && this._currentPath.region || n === I && this._currentPath !== void 0)) {
++    if (this._currentPath !== void 0 && (e !== this._currentPath.tool || t.type === Z || t.type === Xt || t.type === Lp || t.type === Sr || n === W && this._currentPath.region || n === I && this._currentPath !== void 0)) {
+       const r = rt(
+         this._currentPath.segments,
+         this._currentPath.tool,
+         this._currentPath.region
+       );
+-      return this._currentPath = void 0, r;
++      return r && this._currentPath.erase && (r.erase = !0), this._currentPath = void 0, r;
+     }
+   }
+ }, ge = {
+@@ -633,17 +636,61 @@
+ }
+ function Pe(t) {
+   const e = te(t), n = ee(), r = re(), c = Oe(t.filetype), s = [];
++  let sr, block = [];
+   for (const o of t.children) {
+     const i = n.use(o), a = r.use(o, e), p = c.plot(o, i, a);
+-    s.push(...p);
++    (sr ? block : s).push(...p);
++    if (o.type === Sr) {
++      sr && s.push(...stepRepeat(block, sr));
++      const { x: nx = 1, y: ny = 1, i: dx = 0, j: dy = 0 } = o.stepRepeat;
++      sr = nx > 1 || ny > 1 ? { nx, ny, dx, dy } : void 0;
++      block = [];
++    }
+   }
++  sr && s.push(...stepRepeat(block, sr));
+   return {
+     type: Jt,
+     units: e.units,
+-    size: ht(s),
++    size: ht(s.filter((o) => !o.erase)),
+     children: s
+   };
+ }
++function stepRepeat(block, { nx, ny, dx, dy }) {
++  const out = [];
++  for (let ix = 0; ix < nx; ix++)
++    for (let iy = 0; iy < ny; iy++)
++      out.push(...block.map((o) => shiftGraphic(o, ix * dx, iy * dy)));
++  return out;
++}
++function shiftPosition(p, dx, dy) {
++  return p.length === 3 ? [p[0] + dx, p[1] + dy, p[2]] : [p[0] + dx, p[1] + dy];
++}
++function shiftSegments(segments, dx, dy) {
++  return segments.map((o) => ({
++    ...o,
++    start: shiftPosition(o.start, dx, dy),
++    end: shiftPosition(o.end, dx, dy),
++    ...(o.type === g ? { center: shiftPosition(o.center, dx, dy) } : {})
++  }));
++}
++function shiftShape(o, dx, dy) {
++  switch (o.type) {
++    case S:
++      return { ...o, cx: o.cx + dx, cy: o.cy + dy };
++    case H:
++      return { ...o, x: o.x + dx, y: o.y + dy };
++    case M:
++      return { ...o, points: o.points.map((p) => shiftPosition(p, dx, dy)) };
++    case z:
++      return { ...o, segments: shiftSegments(o.segments, dx, dy) };
++    case Y:
++      return { ...o, shapes: o.shapes.map((p) => shiftShape(p, dx, dy)) };
++  }
++  return o;
++}
++function shiftGraphic(o, dx, dy) {
++  return o.type === v ? { ...o, shape: shiftShape(o.shape, dx, dy) } : { ...o, segments: shiftSegments(o.segments, dx, dy) };
++}
+ export {
+   g as ARC,
+   Ce as BoundingBox,
+@@ -661,4 +708,3 @@
+   Pe as plot,
+   pt as positionsEqual
+ };
+-//# sourceMappingURL=tracespace-plotter.js.map
+--- a/plotter/lib/tree.d.ts
++++ b/plotter/lib/tree.d.ts
+@@ -57,15 +57,18 @@
+ export interface ImageShape extends Node {
+     type: typeof IMAGE_SHAPE;
+     shape: Shape;
++    erase?: boolean;
+ }
+ export interface ImagePath extends Node {
+     type: typeof IMAGE_PATH;
+     width: number;
+     segments: PathSegment[];
++    erase?: boolean;
+ }
+ export interface ImageRegion extends Node {
+     type: typeof IMAGE_REGION;
+     segments: PathSegment[];
++    erase?: boolean;
+ }
+ export type PathSegment = PathLineSegment | PathArcSegment;
+ export interface PathLineSegment {
+--- a/plotter/package.json
++++ b/plotter/package.json
+@@ -1,22 +1,15 @@
+ {
+   "name": "@tracespace/plotter",
+-  "publishConfig": {
+-    "access": "public"
+-  },
+-  "version": "5.0.0-alpha.0",
++  "version": "5.0.0-alpha.0-webgerber.1",
+   "description": "Plot @tracespace/parser ASTs into image trees.",
+   "types": "./lib/index.d.ts",
+   "exports": {
+     "types": "./lib/index.d.ts",
+-    "source": "./src/index.ts",
+-    "import": "./dist/tracespace-plotter.js",
+-    "require": "./dist/tracespace-plotter.umd.cjs"
++    "import": "./dist/tracespace-plotter.js"
+   },
+   "files": [
+     "dist",
+-    "lib",
+-    "src",
+-    "!**/__tests__/**"
++    "lib"
+   ],
+   "type": "module",
+   "sideEffects": false,
+@@ -43,8 +36,5 @@
+   "dependencies": {
+     "@types/unist": "^2.0.6",
+     "@tracespace/parser": "5.0.0-alpha.0"
+-  },
+-  "scripts": {
+-    "build": "vite build"
+   }
+-}
+\ No newline at end of file
++}
+--- a/renderer/dist/tracespace-renderer.js
++++ b/renderer/dist/tracespace-renderer.js
+@@ -1315,15 +1315,14 @@
+     case J:
+       return f("path", { d: q(n.segments) });
+     case Z: {
+-      const l = w.fromShape(n), t = an(), o = [];
++      const l = w.fromShape(n);
+       let r = [];
+-      for (const [u, a] of n.shapes.entries())
++      for (const a of n.shapes)
+         if (a.erase && !w.isEmpty(l)) {
+-          const d = `${t}__${u}`;
+-          o.push(f("clipPath", { id: d }, [O(a)])), r = [f("g", { clipPath: `url(#${d})` }, r)];
++          r.length > 0 && (r = eraseWith(r, [O(a)], An(l)));
+         } else
+           r.push(O(a));
+-      return o.length > 0 && r.unshift(f("defs", o)), r.length === 1 ? r[0] : f("g", r);
++      return r.length === 1 ? r[0] : f("g", r);
+     }
+     default:
+       return f("g");
+@@ -1381,7 +1380,21 @@
+   );
+ }
+ function In(n) {
+-  return f("g", {}, n.children.map(W));
++  const l = An(n.size);
++  let t = [], o = [];
++  for (const r of n.children)
++    r.erase ? o.push(W(r)) : (o.length > 0 && t.length > 0 && (t = eraseWith(t, o, l)), o = [], t.push(W(r)));
++  return o.length > 0 && t.length > 0 && (t = eraseWith(t, o, l)), f("g", {}, t);
++}
++function eraseWith(n, l, [x, y, width, height]) {
++  const id = an();
++  return [
++    f("defs", [f("mask", { id, maskUnits: "userSpaceOnUse", x, y, width, height }, [
++      f("rect", { x, y, width, height, fill: "white" }),
++      f("g", { fill: "black", stroke: "black" }, l)
++    ])]),
++    f("g", { mask: `url(#${id})` }, n)
++  ];
+ }
+ function An(n) {
+   return w.isEmpty(n) ? [0, 0, 0, 0] : [n[0], -n[3], n[2] - n[0], n[3] - n[1]];
+@@ -1394,4 +1407,3 @@
+   W as renderGraphic,
+   An as sizeToViewBox
+ };
+-//# sourceMappingURL=tracespace-renderer.js.map
+--- a/renderer/package.json
++++ b/renderer/package.json
+@@ -1,22 +1,15 @@
+ {
+   "name": "@tracespace/renderer",
+-  "publishConfig": {
+-    "access": "public"
+-  },
+-  "version": "5.0.0-alpha.0",
++  "version": "5.0.0-alpha.0-webgerber.1",
+   "description": "Render @tracespace/plotter image trees as SVGs.",
+   "types": "./lib/index.d.ts",
+   "exports": {
+     "types": "./lib/index.d.ts",
+-    "source": "./src/index.ts",
+-    "import": "./dist/tracespace-renderer.js",
+-    "require": "./dist/tracespace-renderer.umd.cjs"
++    "import": "./dist/tracespace-renderer.js"
+   },
+   "files": [
+     "dist",
+-    "lib",
+-    "src",
+-    "!**/__tests__/**"
++    "lib"
+   ],
+   "type": "module",
+   "sideEffects": false,
+@@ -44,13 +37,6 @@
+     "@types/hast": "^2.3.4",
+     "@tracespace/parser": "5.0.0-alpha.0",
+     "@tracespace/xml-id": "5.0.0-alpha.0",
+-    "@tracespace/plotter": "5.0.0-alpha.0"
+-  },
+-  "devDependencies": {
+-    "@types/unist": "^2.0.6",
+-    "hastscript": "^7.2.0"
+-  },
+-  "scripts": {
+-    "build": "vite build"
++    "@tracespace/plotter": "file:../plotter"
+   }
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,8 @@
+Project: OpenShock Core
+Author: OpenShock (https://github.com/OpenShock)
+Source: https://github.com/OpenShock/Hardware
+Commit: 0e7815e4dcb0687b4de13515196ebddb225ed61b
+Path: Core/jlcpcb/gerber
+Files: Gerber and drill files copied unmodified
+License: CERN-OHL-S-2.0 (see LICENSE)
+Retrieved: 2026-11-07

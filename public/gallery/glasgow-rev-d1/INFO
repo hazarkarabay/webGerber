@@ -1,0 +1,8 @@
+Project: Glasgow Interface Explorer rev D1
+Author: Glasgow Embedded contributors (https://github.com/GlasgowEmbedded)
+Source: https://github.com/GlasgowEmbedded/glasgow
+Commit: 70cb38c9b03471acd2eabb76c82308891bec2ca5
+Path: hardware/boards/glasgow/revD1/glasgow.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from glasgow.kicad_pcb
+License: 0BSD (see LICENSE)
+Retrieved: 2026-11-07

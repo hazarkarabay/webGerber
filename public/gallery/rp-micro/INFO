@@ -1,0 +1,8 @@
+Project: RP Micro
+Author: siderakb (https://github.com/siderakb)
+Source: https://github.com/siderakb/rp-micro
+Commit: a7baf36025b974ed55b4676ad1e9f7e79f16bba1
+Path: hardware/rp-micro.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from rp-micro.kicad_pcb
+License: CERN-OHL-P-2.0 (see LICENSE)
+Retrieved: 2026-11-07

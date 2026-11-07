@@ -1,0 +1,8 @@
+Project: Olimex ESP32-PoE rev J
+Author: Olimex (https://www.olimex.com)
+Source: https://github.com/OLIMEX/ESP32-POE
+Commit: deb38a377d50eadb04ddc7118a17a5ae58b1ee53
+Path: HARDWARE/ESP32-PoE-hardware-revision-J/Gerbers
+Files: Gerber and drill files copied unmodified
+License: Apache-2.0 (see LICENSE)
+Retrieved: 2026-11-07

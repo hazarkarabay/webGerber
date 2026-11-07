@@ -1,0 +1,8 @@
+Project: Maple r3
+Author: LeafLabs (https://github.com/leaflabs)
+Source: https://github.com/leaflabs/maple
+Commit: af0703b5f8715e1023687d42c2bbe3822ca3b6be
+Path: maple-r3/maple-r3-fabassy.zip
+Files: Gerber and drill files copied unmodified, inner layers .gnd/.sup left out. Renamed to standard extensions: .top to .GTL, .bot to .GBL, .tsm to .GTS, .bsm to .GBS, .tss to .GTO, .bss to .GBO
+License: CC-BY-SA-2.0 (see LICENSE)
+Retrieved: 2026-11-07

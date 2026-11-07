@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webGerber</title>
+  </head>
+  <body>
+    <header class="top">
+      <a class="home" href="./" data-testid="home"><b>webGerber</b></a>
+      <button type="button" id="open-btn" data-testid="open-btn">Open files / zip...</button>
+      <button type="button" id="panel-toggle" data-testid="panel-toggle" aria-expanded="true" aria-controls="panel" hidden>Hide settings</button>
+    </header>
+    <div id="errors" class="errors" data-testid="error-list" role="alert" hidden>
+      <button type="button" id="errors-dismiss" data-testid="errors-dismiss">Dismiss</button>
+      <ul id="error-items"></ul>
+    </div>
+    <main>
+      <section id="start" class="start">
+        <h1 class="title">webGerber</h1>
+        <p class="tagline">A 3D viewer for PCB Gerber files that runs entirely in your browser.</p>
+        <label class="drop" data-testid="drop">
+          Drop Gerber and drill files or a zip anywhere or click to choose.
+          <input id="file-input" type="file" multiple hidden />
+        </label>
+        <div id="assign" class="assign"></div>
+        <div id="gallery-section" class="gallery-section">
+          <hr />
+          <h2>Or open one of these randomly chosen open-source boards</h2>
+          <div id="gallery" class="gallery" data-testid="gallery"></div>
+        </div>
+        <footer class="credit">
+          <hr />
+          <p data-testid="credit">Inspired by webGerber by Mayhew Labs.</p>
+        </footer>
+      </section>
+      <div id="busy" class="busy" data-testid="busy" role="status" hidden>Rendering...</div>
+      <section id="viewing" class="viewing" hidden>
+        <aside id="panel" class="panel" aria-label="View settings"></aside>
+        <div id="view" class="view"></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

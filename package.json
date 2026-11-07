@@ -1,0 +1,31 @@
+{
+  "name": "webgerber",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "@tracespace/parser": "5.0.0-alpha.0",
+    "@tracespace/plotter": "file:vendor/tracespace/plotter",
+    "@tracespace/renderer": "file:vendor/tracespace/renderer",
+    "jszip": "^3.10.2",
+    "polygon-clipping": "^0.15.7",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}

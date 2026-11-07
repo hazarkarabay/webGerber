@@ -1,0 +1,8 @@
+Project: RAMBo 1.3L
+Author: UltiMachine (https://ultimachine.com)
+Source: https://github.com/ultimachine/Rambo
+Commit: 8701beaa8cfdfd1b838b0de039adca724b31e615
+Path: board/gerbers/RAMBo1-3L.zip
+Files: Gerber and drill files copied unmodified. Renamed to a standard extension: RAMBo.OLN to RAMBo.GKO
+License: CC-BY-SA-3.0 (see LICENSE)
+Retrieved: 2026-11-07

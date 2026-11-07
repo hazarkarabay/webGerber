@@ -1,0 +1,42 @@
+{
+  "name": "@tracespace/renderer",
+  "version": "5.0.0-alpha.0-webgerber.1",
+  "description": "Render @tracespace/plotter image trees as SVGs.",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    "types": "./lib/index.d.ts",
+    "import": "./dist/tracespace-renderer.js"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tracespace/tracespace.git",
+    "directory": "packages/renderer"
+  },
+  "keywords": [
+    "pcb",
+    "circuit",
+    "board",
+    "hardware",
+    "electronics"
+  ],
+  "contributors": [
+    "Mike Cousins <mike@cousins.io> (https://mike.cousins.io)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tracespace/tracespace/issues"
+  },
+  "homepage": "https://github.com/tracespace/tracespace#readme",
+  "dependencies": {
+    "@types/hast": "^2.3.4",
+    "@tracespace/parser": "5.0.0-alpha.0",
+    "@tracespace/xml-id": "5.0.0-alpha.0",
+    "@tracespace/plotter": "file:../plotter"
+  }
+}

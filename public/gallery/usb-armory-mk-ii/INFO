@@ -1,0 +1,8 @@
+Project: USB armory Mk II
+Author: WithSecure Foundry / USB armory contributors (https://github.com/usbarmory)
+Source: https://github.com/usbarmory/usbarmory
+Commit: 38577709d7b720c7ea6e9c0b515afa10746f3c2b
+Path: hardware/mark-two/armory.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from armory.kicad_pcb
+License: CERN-OHL-S-2.0 (see LICENSE)
+Retrieved: 2026-11-07

@@ -1,0 +1,8 @@
+Project: LibreVNA
+Author: Jan Kaeberich (jankae) (https://github.com/jankae)
+Source: https://github.com/jankae/LibreVNA
+Commit: 8a015080ab3c2312a64f53fae2b8e981075ae1a2
+Path: Hardware/Kicad/VNA.kicad_pcb
+Files: Gerber and drill files exported with KiCad 10.0.7 (kicad-cli) from VNA.kicad_pcb
+License: GPL-3.0 (see LICENSE)
+Retrieved: 2026-11-07

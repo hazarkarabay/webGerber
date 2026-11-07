@@ -1,0 +1,8 @@
+Project: A10/A20-OLinuXino-LIME (latest hardware revision)
+Author: Olimex Ltd (https://www.olimex.com)
+Source: https://github.com/OLIMEX/OLINUXINO
+Commit: 85eee9c17ee13af65617d73bdd94de7ec49cfb42
+Path: HARDWARE/A10-OLinuXino-LIME/1. Latest hardware revision/Gerbers
+Files: Gerber and drill files copied unmodified, inner layers Ln1-4_Cu left out. Renamed to standard extensions: Top.gbr to Top.GTL, Bot.gbr to Bot.GBL, Dimension.gbr to Dimension.GKO, Drill.xnc to Drill.XLN
+License: CC-BY-SA-3.0-US, per the repository README (see LICENSE)
+Retrieved: 2026-11-07
