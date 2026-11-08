@@ -93,7 +93,7 @@ export function clipBoard(edge: MultiPolygon, cutoutSets: Polygon[][], diff = di
   return edge
 }
 
-export function buildBoardPolygon(layers: ParsedLayer[]): { polygon: Pt[][][]; box: Box } {
+export function buildBoardPolygon(layers: ParsedLayer[]): { polygon: Pt[][][]; box: Box; slots: number } {
   const of = (t: string) => layers.filter(l => l.id.type === t)
   const outline = of('outline').map(l => chain(l.strokes, 0.01))
   const milling = of('milling').map(l => ({
@@ -110,11 +110,15 @@ export function buildBoardPolygon(layers: ParsedLayer[]): { polygon: Pt[][][]; b
     .reduce<Pt[] | undefined>((m, r) => (!m || area(r) < area(m) ? r : m), undefined) : undefined
   if (board) outlineLoops = outlineLoops.filter(r => r === board || !fits(ringBox(r), ringBox(board), 0.01))
   let millingLoops = dedupe(milling.flatMap(m => m.loops)).filter(r => !outlineLoops.some(q => same(q, r)))
+  const sameSlot = (a: Stroke, b: Stroke) => {
+    const p = ringBox(a.points), q = ringBox(b.points)
+    return Math.abs(a.width - b.width) <= 0.01 && [p.minX - q.minX, p.minY - q.minY, p.maxX - q.maxX, p.maxY - q.maxY].every(d => Math.abs(d) <= 0.01)
+  }
   let slots = [
     ...outline.flatMap(o => o.open.filter(s => s.width > 0)),
     ...milling.flatMap(m => m.slots),
     ...of('drill').flatMap(l => l.strokes.filter(s => s.width > 0)),
-  ]
+  ].filter((s, i, all) => !all.slice(0, i).some(q => sameSlot(q, s)))
   const valid = layers.filter(l => l.bounds.maxX > l.bounds.minX && l.bounds.maxY > l.bounds.minY)
 
   let edge: MultiPolygon = []
@@ -145,7 +149,7 @@ export function buildBoardPolygon(layers: ParsedLayer[]): { polygon: Pt[][][]; b
       edge = [[[[u.minX, u.minY], [u.maxX, u.minY], [u.maxX, u.maxY], [u.minX, u.maxY]]]]
     }
   }
-  if (!edge.length) return { polygon: [], box: boxOf([]) }
+  if (!edge.length) return { polygon: [], box: boxOf([]), slots: 0 }
 
   const circle = (x: number, y: number, d: number, n = Math.min(32, Math.max(8, Math.ceil(d * 2) * 4))): Pt[] =>
     Array.from({ length: n }, (_, i) => [x + (d / 2) * Math.cos((2 * Math.PI * i) / n), y + (d / 2) * Math.sin((2 * Math.PI * i) / n)])
@@ -154,7 +158,7 @@ export function buildBoardPolygon(layers: ParsedLayer[]): { polygon: Pt[][][]; b
   const region = clipBoard(edge, [cutouts, holes])
   // polygon-clipping returns closed rings (last point == first); drop the duplicate
   const open = (mp: MultiPolygon) => mp.map(p => p.map(r => r.length > 1 && r[0][0] === r[r.length - 1][0] && r[0][1] === r[r.length - 1][1] ? r.slice(0, -1) : r))
-  return { polygon: open(region), box: boxOf(edge.flat(2)) }
+  return { polygon: open(region), box: boxOf(edge.flat(2)), slots: slots.length }
 }
 
 export function pointInBoard(polygon: Pt[][][], p: Pt): boolean {

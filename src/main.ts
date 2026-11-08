@@ -201,11 +201,10 @@ async function updateDetail() {
   viewer!.invalidate()
 }
 
-function showInfo(polygon: Pt[][][], box: Box) {
+function showInfo(polygon: Pt[][][], box: Box, slots: number) {
   const count = (type: string, side?: string) =>
     layers.filter(l => l.id.type === type && (!side || l.id.side === side)).reduce((n, l) => n + l.flashes, 0)
   const holes = layers.filter(l => l.id.type === 'drill').flatMap(l => l.holes)
-  const slots = layers.filter(l => l.id.type === 'drill').flatMap(l => l.strokes).filter(s => s.width > 0).length
   const rows: [string, string, string?][] = polygon.length
     ? [
         ['Size', `${(box.maxX - box.minX).toFixed(1)} x ${(box.maxY - box.minY).toFixed(1)} mm`, 'board-size'],
@@ -231,9 +230,9 @@ async function rebuild() {
   const kept = board !== null
   if (geometryDirty || !board) {
     geometryDirty = false
-    const { polygon, box } = buildBoardPolygon(
+    const { polygon, box, slots } = buildBoardPolygon(
       layers.filter(l => !['outline', 'milling', 'drill'].includes(l.id.type) || look.enabled[l.file] !== false))
-    showInfo(polygon, box)
+    showInfo(polygon, box, slots)
     if (!polygon.length) {
       board = null
       viewer!.setBoard(new THREE.Group(), box)
